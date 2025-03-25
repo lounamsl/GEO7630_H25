@@ -1,6 +1,4 @@
 
-URL_ALIAS = 'https://special-train-gv4r9g5gj4cvp7'
-
 // création de la carte Mapbox GL
 var map = new maplibregl.Map({
     container: 'map', // identifiant de l'élément HTML conteneur de la carte
