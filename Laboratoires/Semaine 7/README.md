@@ -1,140 +1,105 @@
-Laboratoire #7
+# 🛰 **Laboratoire 6 et 7 : ArcGIS Online, Dashboard et Experience Builder – Intégration de données**
 
-****
+---
 
-ArcGIS Online, Dashboard et Experience Builder et intégration de données
+## 🛠 **Prérequis**
+- ✅ **Compte ArcGIS Online** configuré.
+- ✅ **FME** installé et configuré.
 
-****
+---
 
-[**Import dans AGOL ****2**](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.obevib9yx6mf)
+## 📋 **Déroulement et explications**
+Ce laboratoire vous guidera à travers l’intégration de données dans **ArcGIS Online (AGOL)** et leur exploitation via **Dashboard** et **Experience Builder**. Vous apprendrez également à automatiser les mises à jour avec **FME**.
 
-[CSV Reader 2](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.j7ityrx72w9k)
+---
 
-[AttributeFilter 2](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.qqurfanc4ilv)
+## 🔧 **Outils nécessaires**
+- **ArcGIS Online (AGOL)**
+- **FME**
+- **ESRI Dashboard**
+- **ESRI Experience Builder**
 
-[StatisticsCalculator 3](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.eic7z1m2romu)
+---
 
-[AttributeManager 4](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.ehpp8heg86oj)
-
-[FeatureJoiner 5](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.onmraas8odt0)
-
-[AttributeManager 7](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.cb4tjxg1ufhp)
-
-[Writer 8](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.69efvtz164xk)
-
-[**Visualisation dans AGOL ****9**](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.dqstqds7kjjb)
-
-[Création dossier 9](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.aayizmqhxfyo)
-
-[Mapviewer 11](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.suq8myuqhmb)
-
-[**ESRI Dashboard ****16**](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.qv1fefk9hkpg)
-
-[**ESRI Experience Builder ****31**](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.snf7ukc56jh9)
-
-[**Mise à jour des données avec FME ****46**](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.14qyickzd8g4)
-
-[CSV Reader 46](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.hmedi9fwzw22)
-
-[AGOL Reader 46](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.srjjyuumq9cx)
-
-[ChangeDetector 48](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.8xnmfix0o0jl)
-
-[AttributeManager 48](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.9e72ikq2mal)
-
-[AGOL Writer 49](https://docs.google.com/document/d/1SfLisZeHt6MnFq18O31P7zz6s5sszebyyPxqY6DnNeA/edit#heading=h.hx15v63ygt0x)
+## 📂 **Importation des données dans ArcGIS Online**
 
 
-# Import dans AGOL
+### 📥 **Étape 1 : Chargement des données CSV**
 
-****
-
+**Pourquoi ?**  
+👉 Charger les données CSV dans AGOL permet de stocker et d’exploiter les informations sous forme de services de données géospatiales.
 
 ## CSV Reader
 
-****
-
-1. Créer un nouveau WB FME
-
-****
-
-2. Ajouter un nouveau CSV Reader
-
-****
-
-3. Utilisez l’url suivante pour le CSV :
-
-<https://sitewebbixi.s3.amazonaws.com/uploads/docs/20220107-donnees-ouvertes-8aa623.zip>
-
+1. Créer un **nouveau Workbench (WB) FME**.
+2. Ajouter un **CSV Reader**.
+3. Utiliser l’URL suivante pour importer les données :  
+   <https://sitewebbixi.s3.amazonaws.com/uploads/docs/20220107-donnees-ouvertes-8aa623.zip>
+4. Vérifier l'importation des données.
 
 ## AttributeFilter
 
-Cela va filtrer les entités qui ne possède pas la propriété (longitude) Parce qu’il y a 2 csv dans le .zip, les stations et les origines et destinations (sans les coordonnées lat long des stations). 
+### 🎯 **Étape 2 : Filtrage des attributs (AttributeFilter)**
 
-Il faudra alors faire une jointure en amont pour aller chercher les coordonnées de chaque origine/destionation sur la clé primaire (identifiant unique de chaque station)
+**Pourquoi ?**  
+👉 Éliminer les enregistrements sans coordonnées et préparer une jointure pour récupérer les informations manquantes.
 
-****
-
-1. Ajoutez-y un attributeFilter comme ceci 
-
+1. Ajouter un **AttributeFilter**.
+2. Exclure les entités n’ayant pas de **longitude**.
+3. Configurer un filtre pour identifier les stations mal géolocalisées.
    1. Ajoutez -1 pour filtrer les stations qui ont des mauvaises coordonnées ou des coordonnées éronnées
 
 **![](https://lh7-us.googleusercontent.com/j4CtZGoIZKl0cSzlbLchs8O-XmxcU8SQZJFRDbvOAF88Sm611Yy9cUZQHbEmR4G_F5-mdaUVI0UtxMRDiZYQF0HNgNoqYb636y_F11y5aOne-GJ_FHw_3xwqaXoWqSjb7j9ngvFDVWLi8DRQgP8kCQk)**
 
+---
 
-## StatisticsCalculator
+### 📊 **Étape 3 : Calcul des statistiques (StatisticsCalculator)**
+**Pourquoi ?**  
+👉 Effectuer une analyse statistique pour calculer les **arrivées et départs** par station.
 
-****
+1. Ajouter un **StatisticsCalculator** sur le champ `emplacement_pk_end` sur le port Missing de sortie
 
-1. Ajoutez-y un StatisticsCalculator sur le port “missing” qui aura pour but de calculer le total des arrivées pour chaque station. ! Attention il faut que ce soit un group processing sur l’attribut emplacement\_pk\_end. Ce qui va nous permettre de faire la somme par station d’arrivée
+![](https://lh7-us.googleusercontent.com/RRozhWCVyQim0es68la20hh7ElKzU6YsPjgxtctb0f3Y6Q2RawLCaXstOt7ytqwkN7y1_Z3G_t3rJMODtyEH7HTfiELfAWJ6AKdZFSA7aPjnqbc7_EdVpEZfD30gwvuLYR0UGbmYfgZ3VUSe2xs3lsE)
 
-****
+![](https://lh7-us.googleusercontent.com/UJ1lngnF_l3q6vQTR2UVShV5M8WyJLJ8d5P2ca6quLTtp94fFJIVzVD5sC5Zuhp_TK3h8K6MutYFzpMyDdXhgz1wCysvAsOD4HU_4x4sofl-AUdgaz-Lx3YRd8mvU-mXF_NPFNYxu4Xa33cWigEpZ8Y)
 
-![](https://lh7-us.googleusercontent.com/vLR6PVS8YYT4_Dp9KhB9hdLPwkMqnfTH-5bgRYOZjvuBdgvS5DqFQA2aO-PNUYa81IOcHrEi3HVtevfREZouvM6ktCyjMLjqVRaTiu-cP7HADOgTLwVuMTtRtCvno-AQFQY-XH0x7NanqK0gHDUW-u4)![](https://lh7-us.googleusercontent.com/RRozhWCVyQim0es68la20hh7ElKzU6YsPjgxtctb0f3Y6Q2RawLCaXstOt7ytqwkN7y1_Z3G_t3rJMODtyEH7HTfiELfAWJ6AKdZFSA7aPjnqbc7_EdVpEZfD30gwvuLYR0UGbmYfgZ3VUSe2xs3lsE)
+2. Grouper les données pour obtenir le **total des arrivées** par station.
+3. Répéter l’opération pour les **départs**. (emplacement_pk_start)
 
-****
-
-1. Puis ajoutez y un autre StatisticsCalculator encore sur le port : “missing” qui aura pour but de calculer le total des départs pour chaque station
-
-**![](https://lh7-us.googleusercontent.com/UJ1lngnF_l3q6vQTR2UVShV5M8WyJLJ8d5P2ca6quLTtp94fFJIVzVD5sC5Zuhp_TK3h8K6MutYFzpMyDdXhgz1wCysvAsOD4HU_4x4sofl-AUdgaz-Lx3YRd8mvU-mXF_NPFNYxu4Xa33cWigEpZ8Y)**
+![](https://lh7-us.googleusercontent.com/vLR6PVS8YYT4_Dp9KhB9hdLPwkMqnfTH-5bgRYOZjvuBdgvS5DqFQA2aO-PNUYa81IOcHrEi3HVtevfREZouvM6ktCyjMLjqVRaTiu-cP7HADOgTLwVuMTtRtCvno-AQFQY-XH0x7NanqK0gHDUW-u4)
 
 
-## AttributeManager
+### ✏️ **Étape 4 : Nettoyage et gestion des attributs (AttributeManager) pour les stations de Bixi**
+**Pourquoi ?**  
+👉 Conserver uniquement les attributs nécessaires et garantir la cohérence des noms de champs.
 
-1. Puis ajoutez un AttributeManager sur le port “Unfiltered”.
-
-****
-
-Ce sont les stations qui vont sortir ici (le 2eme csv dans le .zip) on supprime les attributs non nécessaires. On garde juste le nom de la station et sa clé primaire (identifiant unique)
-
-****
-
-![](https://lh7-us.googleusercontent.com/nlxU6U8iZar9xjox663B0q7dkhpCY4-0fLZfepxULtTGmadezxl0cE-8455vhz96Q1BjYAR45u-0lOzwBkjr99JNlO-PiYl9MSiUrRK6YGywEx-7srMy4Rwm_I5ZVRdkIrkXboe9FZ3DIF0P2EyOWlc)
-
-****
-
-Rendu après quelques étapes
-
-****
+0. Sur le port UNFILTERED sortiront les 734 stations (c'est le 2eme csv dans le .zip)
 
 ![](https://lh7-us.googleusercontent.com/DqwlvbiFGO0PkPMMHA1eMTUs6_1bTa_d5rl-A23s-72swkXQAlHT2JGwJ9LOaveGCWfCcIy9hAtbEy2iT1IOYGQOrCVvjsslSHDQV5MRvSu98xYSif0eDfnWf57I5sA8fSZWpq42TIqEQJihmzeIcLA)
 
-****
+1. Ajouter un **AttributeManager**.
+2. Supprimer les attributs inutiles.
+3. Renommer les champs pour faciliter l’intégration dans AGOL.
 
 
-## FeatureJoiner
+![](https://lh7-us.googleusercontent.com/nlxU6U8iZar9xjox663B0q7dkhpCY4-0fLZfepxULtTGmadezxl0cE-8455vhz96Q1BjYAR45u-0lOzwBkjr99JNlO-PiYl9MSiUrRK6YGywEx-7srMy4Rwm_I5ZVRdkIrkXboe9FZ3DIF0P2EyOWlc)
 
-****
+---
 
-1. Ajoutez un FeatureJoiner pour joindre les attributs (des stations vers les origine/destination) 
 
-****
+### 🔗 **Étape 5 : Jointure des données (FeatureJoiner)**
+**Pourquoi ?**  
+👉 Associer les coordonnées aux stations pour garantir leur localisation correcte.
+
+1. Ajouter un **FeatureJoiner** pour relier les **stations** aux **données de départ part stations**
+2. Configurer la clé de jointure sur l’**identifiant unique des stations** (PK pour Primary Key).
+3. Attention de bien utiliser la jointure de type "Full" 
 
 ![](https://lh7-us.googleusercontent.com/wgG8_zZ4luIeiPCvGJqz1bSXuFj0UDWQXOzsTkEYToQt9nw3Z9mBt3TSDQ_tVriU-OH94KvZu9Xhjs593VPpEoEpmT4RNXEFSYBxDpFFIU7SMGMm8M4kB0uSnrgMFxVGmF7cu_ziExRfX6ju1Z_-KyI)
 
-****
+---
 
-2. Puis ajoutez un autre FeatureJoiner enchaîné
+2. Puis ajoutez un autre FeatureJoiner enchaîné sur le port de sortie "Joined" pour joindre les sommes des arrivées par stations
 
 ****
 
@@ -162,71 +127,47 @@ Rendu après quelques étapes
 ![](https://lh7-us.googleusercontent.com/ey4WVedt0rsa_9fuEIcpAztRRrgOwb01tUinzpjVOVdOsmMk0JNHkPgBNf7-YC3gp8g8PnHZliBcA-dGnOMNufh2RTqt3EM23Tad-GZckN_mhiL5DOXH39qIwibu4py3Vn6ZAqFzNNRh3HFtJKtGH1c)
 
 
-## Writer
+### 💾 **Étape 6 : Exportation des données vers ArcGIS Online**
+**Pourquoi ?**  
+👉 Publier les données sur AGOL permet de les exploiter dans un **tableau de bord interactif**.
 
-****
+`https://uqam.maps.arcgis.com/home/index.html`
 
-![](https://lh7-us.googleusercontent.com/nDiNKxDuRIViE9hr7sE91USSf9VAgPO6mahT8BnEoCkhA_Z3M2Mc44lalCOmqKn03NP26hZdsogEsw5R6oYVh6hpl6QhAO-BamqRYxL25BB7VF0qwSFoSBItZpQrKphKVVscNiTdufLvUcSuCEkvlx0)
-
-****
-
-1. Avec connexion avec votre compte AGOL
-
-****
-
-Créer un nouveau Features Service dans le DOSSIER Cours 7 Laboratoire que vous aurez précédemment crée et cocher CREATE IF NEEDED (FME 2022 seulement)
-
-****
-
-![](https://lh7-us.googleusercontent.com/kdIp2hj_J3V7OCS0mG8XJNt7Hf-sHFgD7zgT8w_aKYHYNiZxcKi6N2F1rZcEbo68w1cZXmSY1fI5ent8-_GzSICvqNWQs1hOrJYua6nqPL-1WZl1LhlATlZhNhg0rZg-e-kNTgvkZkra8pFEIIpCamE)
-
-****
-
-
-# Visualisation dans AGOL
-
-## Création dossier
-
-1. Allez dans votre page de contenu AGOL et créer un nouveau DOSSIER GEO7630
-
-****
-
-<https://www.arcgis.com/index.html>
-
-****
+1. Accéder à **ArcGIS Online** et créer un dossier `GEO7630`.
+   -  Aller dans Contenu , puis Mes contenus et sur la gauche créer un Dossier
 
 ![](https://lh7-us.googleusercontent.com/DZ8WAB-zk0cH9rU96LVh8fG9B8hOvhWNaWlu9YLu0mVgpnBNhGuxFDM3S6BC5jcgHFdKGmqMK8c-hKREJXGvZQOP8NV-FLm6530uYhuxrif0BTL-GfVI6S3cLIUykklVXRPbliNC8ZUSfNz2oMusOf8)
 
-****
+1. Connecter FME à **AGOL Writer**.
+2. Créer un **nouveau Feature Service** dans le **dossier "Geo7630h25"** précédemment crée.
+3. Activer **CREATE IF NEEDED** pour la mise à jour automatique.
 
-1. Déplacer votre nouveau FEATURE SERVICE dans le dossier
 
-****
+![](https://lh7-us.googleusercontent.com/nDiNKxDuRIViE9hr7sE91USSf9VAgPO6mahT8BnEoCkhA_Z3M2Mc44lalCOmqKn03NP26hZdsogEsw5R6oYVh6hpl6QhAO-BamqRYxL25BB7VF0qwSFoSBItZpQrKphKVVscNiTdufLvUcSuCEkvlx0)
 
-![](https://lh7-us.googleusercontent.com/6CYNCxKUPh_nX5Javi5zL5ZlSlqHmlYnv7pnXqOqeHE6kMVwo5_SlzvhjkDblVagUc9CfJSAMWUTyRYn7879l2DimUom66wNa87D7XVGQZp5Zn_K24SkUpnB_zmBNLHieeD3uiv1yY1Tj99E3E_E_S0)
 
-![](https://lh7-us.googleusercontent.com/CACMnMK75Ux5quRUYwAGzAC_T6rp2f47sf_yLaj7O0btZHt7vqBEgHncRAu6Gbstise2xizEtsEME7QmljtsKK-_qVonD2lC74nsQiDS6VBnYYN7Ms1GBn1ZbGXK4lc9g0jqUKZYCaVDtX1h686LQ84)
+![](https://lh7-us.googleusercontent.com/kdIp2hj_J3V7OCS0mG8XJNt7Hf-sHFgD7zgT8w_aKYHYNiZxcKi6N2F1rZcEbo68w1cZXmSY1fI5ent8-_GzSICvqNWQs1hOrJYua6nqPL-1WZl1LhlATlZhNhg0rZg-e-kNTgvkZkra8pFEIIpCamE)
 
-****
+---
+
+
+## 🗺 **Visualisation et exploitation des données dans ArcGIS Online**
 
 1. Allez à la page Contenu
 
-****
-
 2. Maintenant cliquez sur votre Nouveau FeatureLayer
-
-****
 
 3. Et cliquez sur Ouvrir dans MapViewer
 
 
-## Mapviewer
+### 🗺 **Étape 8 : Création d’une carte interactive (MapViewer)**
+**Pourquoi ?**  
+👉 Le **MapViewer** permet de visualiser dynamiquement les données et d’appliquer des styles cartographiques.
 
-****
+1. Ouvrir le **Feature Layer** dans MapViewer.
+2. Appliquer un **style d’agrégation** pour représenter les départs et arrivées.
+3. Configurer les étiquettes pour afficher les **totaux par station**.
 
-1. Vous avez maintenant la possibilité de jouer avec les différentes propriétés de la couche
-
-2. Cliquez sur Agrégation
 
 ![](https://lh7-us.googleusercontent.com/4rbvGDZExeWDZN3mUWD0eZdtJu8VeAcyz8jBgmwEfrB7vkYvTIgq7HctS6LMqB1aMag1HkMeoa2jeZKcTFc4Yzr4adCEQQf6G7GS5CkXfTiEgDPGtCWJTysKew3JMdW6bzB2BAFS6YemlW7-W1kMCTo)
 

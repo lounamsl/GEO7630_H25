@@ -69,15 +69,6 @@
 
 ---
 
-## 📝 Devoir
-- **Travail pratique 3 (TP3)** : Création et publication d'une carte interactive dans ArcGIS Online.
-- **Livrables** :
-  - Carte web interactive.
-  - Application utilisant les principes de **sémiologie graphique** et un **service WFS**.
-- **Date de remise** : **11 mars 2025**.
-
----
-
 ## ❓ Questions et échanges
 - Discussion sur les défis rencontrés dans la production des cartes interactives.
 - Présentation des cartes produites et retours constructifs.

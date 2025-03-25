@@ -101,15 +101,6 @@
 
 ---
 
-## 📝 Devoir
-- **Travail pratique 3 (TP3)** : Développement d'une application web interactive intégrant **Dashboard** et **Experience Builder**.
-- **Livrables** :
-  - Tableau de bord opérationnel.
-  - Application interactive incluant des widgets et des visualisations personnalisées.
-- **Date de remise** : **11 mars 2025**.
-
----
-
 ## ❓ Questions et échanges
 - Discussion sur les défis liés à la création d’applications web avec ArcGIS Online.
 - Retour sur les projets d’application développés pendant le laboratoire.

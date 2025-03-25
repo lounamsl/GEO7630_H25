@@ -4,13 +4,12 @@
 - **À préciser**
 
 ## 🎯 Objectif du TP3
-L’objectif de ce travail est de **développer une application web cartographique** interactive qui diffuse et visualise des données géospatiales tout en respectant les bonnes pratiques d’UI/UX et sémiologie.
+L’objectif de ce travail est de **développer une application web cartographique** interactive qui diffuse et visualise des données géospatiales tout en respectant les bonnes pratiques d’UI/UX et de sémiologie.
 
 Vous devrez :
 1. Développer et documenter une application web interactive.
 2. Intégrer plusieurs types de couches géospatiales (WFS, VTS, WMS/WMTS, etc.).
 3. Créer une visualisation dynamique incluant des **couches extrudées**, des **3D Tiles**, et des indicateurs dynamiques.
-4. Présenter votre projet de manière vulgarisée.
 
 ---
 
@@ -26,15 +25,12 @@ Vous devrez :
 ### **1. Architecture du dépôt GitHub**
 Le TP3 doit être organisé comme suit :
 ```plaintext
-TP3/
+Atlas/app/equipe-X/
 ├── README.md          # Présentation de l'application
-├── code/              # Code JavaScript
-│   ├── main.js        # Script principal
-│   ├── layers.js      # Gestion des couches
-│   └── styles.css     # Styles UI/UX
-├── data/              # Données sources utilisées
-├── images/            # Captures d'écran et autres visuels
-└── presentation/      # Présentation orale (ou vidéo enregistrée)
+├── main.js        # Script principal
+├── layers.js      # Gestion des couches
+├── styles.css     # Styles UI/UX
+└── images/            # Captures d'écran et autres visuels
 ```
 
 ### **2. Développement de l'application**
@@ -54,7 +50,7 @@ Votre application doit inclure :
 
 ---
 
-### **3. Présentation orale**
+### **3. Présentation**
 Votre présentation doit inclure :
 1. **Vulgarisation du traitement des données** :
    - Explication simple et accessible de vos processus de traitement.
@@ -70,12 +66,7 @@ Un fichier **README.md** dans votre répertoire **TP3/** doit contenir :
    - Objectif de l’application.
    - Fonctionnalités incluses.
 2. **Architecture du code** :
-   - Explication des fichiers JavaScript et styles CSS.
-3. **Détails des couches intégrées** :
-   - Sources des données et formats utilisés.
-4. **Instructions pour exécuter l’application** :
-   - Dépendances nécessaires.
-   - Commandes pour lancer le projet.
+   - Explication haut niveau des fichiers JavaScript.
 5. **Schéma explicatif** des traitements réalisés.
 6. **Captures d’écran** de l’application.
 
@@ -99,12 +90,6 @@ Un fichier **README.md** dans votre répertoire **TP3/** doit contenir :
 | **UI/UX et sémiologie**                     | 10%          |
 | **Pertinence de l’application**             | 10%          |
 | **Documentation du code**                   | 10%          |
-
-### **Présentation orale**
-| Critère                                      | Pondération   |
-|--------------------------------------------|--------------:|
-| **Vulgarisation du traitement des données** | 2%           |
-| **Vulgarisation de l’application**          | 3%           |
 
 ---
 

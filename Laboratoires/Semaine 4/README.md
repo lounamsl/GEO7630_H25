@@ -101,7 +101,9 @@ Nom de la table : `hm-2002-can-4000-0257`
 
 ![alt text](images/image-10.png)
 
+## Visualisation QGIS
 
+![alt text](images/image-03.png)
 
 
 ## Étape 7 
@@ -226,7 +228,7 @@ Résultats
 
 Résultat du WB 
 
-![alt text](image-1.png)
+![alt text](images/image-01.png)
 
 
 # 3eme partie Intégration de raster (MNS)
@@ -270,7 +272,7 @@ Laissez les options par défaut
 ![alt text](images/image-29.png)
 
 
-![alt text](image-2.png)
+![alt text](images/image-02.png)
 ## Visualisation QGIS
 
 Nous sommes maintenant capables d'avoir des polygones vectoriels qui possèdent une propriété d'élévation, ce qui va nous permettre plus tard de faire une jointure spatiale entre ces points ou ces polygones et les bâtiments pour faire de l'extrapolation 2.5D.
